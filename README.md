@@ -4,8 +4,8 @@ A command-line expense tracker written in Python.
 
 ## Features
 
-- Add expenses
-- Delete expenses
+- Add expense
+- Delete expense
 - View all expenses
 - Find expenses by category
 - Calculate total spending

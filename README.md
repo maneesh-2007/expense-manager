@@ -9,8 +9,8 @@ A command-line expense tracker built with Python to manage daily expenses.
 - Delete expense by ID
 - Find expenses by category
 - Calculate total spending
-- Save expenses to a JSON file
-- Load expenses from a JSON file
+- Save expenses to a database
+- Load expenses from a database
 - Automatic expense ID generation
 - Input validation and basic error handling
 
@@ -28,7 +28,7 @@ expense-manager/
 
 - Python
 - Object-Oriented Programming
-- JSON
+- SQLite
 - Git & GitHub
 
 ## How to Run

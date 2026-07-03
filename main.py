@@ -1,7 +1,9 @@
 from expense import Expense
 from expense_manager import ExpenseManager
 from datetime import datetime
+
 BACK = 'b'
+
 manager = ExpenseManager()
 
 while True:
@@ -141,17 +143,13 @@ Enter your choice(1-8):
             manager.save(file_name)
         
         case 7:
-            while True:
-                file_name = input("Enter the name of file you wish to load.\n")
-
-                if file_name == BACK:
-                    break
-
-                if manager.load(file_name):
-                    break
+            file_name = input("Enter the name of file you wish to load.\n")
 
             if file_name == BACK:
                 continue
+
+            if manager.load(file_name):
+                break
 
         case 8:
             print("Exiting expense tracker.")

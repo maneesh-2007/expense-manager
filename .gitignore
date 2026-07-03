@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 .vscode/
 my_expenses.json
+test.db
+sample_expenses.db

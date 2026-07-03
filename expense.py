@@ -1,11 +1,11 @@
 class Expense:
     
-    def __init__(self, amount, category, description, date):
+    def __init__(self, amount, category, description, date, expense_id = None):
         self.amount = amount
         self.category = category
         self.description = description
         self.date = date
-        self.id = None
+        self.id = expense_id
 
     def __str__(self):
         return (
@@ -18,11 +18,13 @@ class Expense:
     
     def dict_version(self):
         return {
+                "id" : self.id,
                 "amount" : self.amount,
                 "category" : self.category,
                 "description" : self.description,
                 "date" : self.date
                }
     
+    @staticmethod
     def from_dict(expense):
-        return Expense(expense["amount"], expense["category"], expense["description"], expense["date"])
+        return Expense(expense["amount"], expense["category"], expense["description"], expense["date"], expense["id"])

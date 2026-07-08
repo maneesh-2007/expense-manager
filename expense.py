@@ -1,13 +1,14 @@
+from typing import Dict, Any
 class Expense:
     
-    def __init__(self, amount, category, description, date, expense_id = None):
-        self.amount = amount
-        self.category = category
-        self.description = description
-        self.date = date
-        self.id = expense_id
+    def __init__(self, amount: float, category: str, description: str, date: str , expense_id: Any = None) -> None:
+        self.amount: float = amount
+        self.category: str = category
+        self.description: str = description
+        self.date: str = date
+        self.id: Any = expense_id
 
-    def __str__(self):
+    def __str__(self) -> str:
         return (
             f"ID          : {self.id}\n"
             f"Amount      : {self.amount}\n"
@@ -16,7 +17,7 @@ class Expense:
             f"Date        : {self.date}"
         )
     
-    def dict_version(self):
+    def dict_version(self) -> Dict[str, Any]:
         return {
                 "id" : self.id,
                 "amount" : self.amount,
@@ -26,5 +27,5 @@ class Expense:
                }
     
     @staticmethod
-    def from_dict(expense):
+    def from_dict(expense: Dict[str, Any]) -> 'Expense':
         return Expense(expense["amount"], expense["category"], expense["description"], expense["date"], expense["id"])
